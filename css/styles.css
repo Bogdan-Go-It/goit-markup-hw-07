@@ -89,6 +89,7 @@ button {
   padding-left: 16px;
   padding-right: 16px;
 }
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -99,10 +100,12 @@ button {
     max-width: 1158px;
   }
 }
-@media screen and (min-width: 600px) /* HEADER ==============================================================================*/ .header-container {
+@media screen and (min-width: 600px) 
+.header-container {
   display: flex;
   align-items: center;
 }
+/* HEADER ==============================================================================*/ 
 
 .header {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -213,9 +216,8 @@ button {
   color: var(--color-ocean);
 }
 /*  ========================================MAIN=========================================*/
-.main {
-}
-/*  ======================================CARD==========================================*/
+.main {}
+  /*  ======================================CARD==========================================*/
 .container-card {
 }
 .card {
@@ -323,8 +325,10 @@ button {
     flex-direction: row;
   }
 }
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~``~~~~~~`
 .description-item {
-  width: 396px;
+  max-width: 396px;
+  min-width: 288px;
 }
 @media screen and (min-width: 768px) {
   .description-item {
@@ -342,7 +346,7 @@ button {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
-  /* text-align: center; */
+  text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--color-navy-blue);
@@ -350,16 +354,19 @@ button {
 }
 @media screen and (min-width: 768px) {
   .description-head {
+    text-align: left;
   }
 }
 @media screen and (min-width: 1158px) {
   .description-head {
+    text-align: left;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
   }
 }
 .description-uppertitle {
+  
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -469,7 +476,7 @@ button {
 @media screen and (min-width: 768px) {
   .team-list {
     flex-direction: row;
-    width: 558px;
+    width: 552px;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -563,6 +570,8 @@ button {
 }
 
 .costomers-container {
+  
+  
 }
 .customer-head {
   font-family: "Roboto";
@@ -579,37 +588,41 @@ button {
 }
 .customers-list {
   display: flex;
-  justify-content: center;
-  gap: 24px;
-  width: 396px;
+  flex-wrap: wrap;
+  
+  gap: 16px;
+  width: 100%;
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .customers-list {
-    width: 552px;
+    width: 552px;gap: 24px;
   }
 }
 @media screen and (min-width: 1158px) {
   .customers-list {
-    1128px
+gap: 24px;
+    width: 1128px; 
   }
 }
 
 .list {
 }
 .costomers-item {
-  width: calc((100% - 24px) / 2);
-  height: 88px;
+  width: calc((100% - 16px)/2);
+    height: 88px;
 }
 @media screen and (min-width: 768px) {
   .costomers-item {
-    width: calc((100% - 48px) / 3);
+    width: 168px;
   }
 }
 @media screen and (min-width: 1158px) {
   .costomers-item {
-    width: calc((100% - 120px) / 6);
+ width: 168px;
   }
 }
+
 .customers-linc {
   display: flex;
   justify-content: center;
@@ -643,16 +656,52 @@ button {
   padding-bottom: 100px;
 }
 .footer-container-lo {
+  flex-wrap: wrap;
   align-items: baseline;
   display: flex;
 }
+@media screen and (min-width: 768px) {
+  .footer-container-lo {
+  width: 552px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer-container-lo {
+   width: 1157px;
+
+  }
+}
+
 .footer-container {
   width: 264px;
-  margin-right: 120px;
+  margin: 0 auto 72px auto;
   display: inline-block;
+  
+}
+@media screen and (min-width: 768px) {
+  .footer-container {
+   margin: 0 24px 72px 0;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer-container {
+    margin: 0 120px 0 0;
+    
+  }
 }
 .footer-container-logo {
-  margin-bottom: 16px;
+  margin: 0 0 16px 0;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .footer-container-logo {
+   justify-content: left;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer-container-logo {
+ justify-content: left;
+  }
 }
 .studio-footer {
   display: inline-block;
@@ -664,10 +713,23 @@ button {
   color: var(--color-cloud);
 }
 .footer-container-social {
-  margin-right: 80px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 72px auto;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .footer-container-social {
+   margin: 0 auto 0 0;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer-container-social {
+margin: 0 80px 0 0;
+  }
 }
 .footer-head {
-  margin-bottom: 16px;
+  
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -675,6 +737,18 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-white);
+  margin: 0 auto 16px auto;
+ 
+}
+@media screen and (min-width: 768px) {
+  .footer-head {
+  margin: 0 auto 16px 0;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer-head {
+
+  }
 }
 .footer-list {
   display: flex;
@@ -707,9 +781,21 @@ button {
   fill: var(--color-cloud);
 }
 .footer-container-modal {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .footer-container-modal {
+   
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer-container-modal {
+ width: 453px;
+  }
 }
 .footer-container-modal-label {
   margin-bottom: 16px;
+  text-align: center;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -718,18 +804,59 @@ button {
   letter-spacing: 0.02em;
   color: var(--color-white);
 }
+@media screen and (min-width: 768px) {
+  .footer-container-modal-label {
+   text-align: left;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer-container-modal-label {
+ text-align: left;
+  }
+}
 .footer-container-modal-form {
+  justify-content:center;
   display: flex;
-  gap: 24px;
-  height: 40px;
+  flex-wrap: wrap;
+  
+  gap: 16px;
+  /* height: 40px; */
+  
+  
+}
+@media screen and (min-width: 768px) {
+  .footer-container-modal-form {
+   justify-content:left;
+   gap: 24px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer-container-modal-form {
+ justify-content: baseline;
+ gap: 24px;
+  }
 }
 .foter-container-label {
+  
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .foter-container-label {
+  width: 264px;
+  
+  }
+}
+@media screen and (min-width: 1158px) {
+  .foter-container-label {
+width: 264px;
+  }
 }
 .footer-container-modal-input {
   border: 1px solid var(--color-white);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  width: 264px;
+  
+  width: 100%;
   height: 40px;
 
   background: none;
@@ -744,7 +871,9 @@ button {
   letter-spacing: 0.04em;
   color: var(--color-white);
 }
+
 .footer-container-modal-btn {
+  width: 165px;
   border: var(--color-iris);
   background: var(--color-iris);
   border-radius: 4px;
