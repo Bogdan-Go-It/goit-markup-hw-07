@@ -100,11 +100,8 @@ button {
     max-width: 1158px;
   }
 }
-@media screen and (min-width: 600px) 
-.header-container {
-  display: flex;
-  align-items: center;
-}
+/* @media screen and (min-width: 600px)  */
+
 /* HEADER ==============================================================================*/ 
 
 .header {
@@ -112,12 +109,26 @@ button {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   border-bottom: 1px solid #e7e9fc;
 }
+.header-container {
+  display: flex;
+  align-items: center;
+}
 .header-nav {
   display: flex;
-
   align-items: center;
-  margin-right: 332px;
+  margin-right: auto;
 }
+@media screen and (min-width: 768px) {
+  .header-nav {
+   margin-right: 120px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .header-nav {
+    margin-right: 76px;
+  }
+}
+
 .studio,
 .studio-footer {
   font-family: Raleway, sans-serif;
@@ -138,12 +149,22 @@ button {
   font-size: 18px;
   line-height: 1.17;
   display: flex;
-
-  margin-right: 76px;
   align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-iris);
+
+  
+}
+@media screen and (min-width: 768px) {
+  .header-logo {
+   margin-right: 120px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .header-logo {
+    margin-right: 76px;
+  }
 }
 .conrainer-header-logo {
 }
@@ -152,6 +173,12 @@ button {
   align-items: center;
   gap: 40px;
 }
+@media only screen and (max-width: 767px) {
+  .header-list {
+   display: none;
+  }
+}
+
 .header-item {
   display: flex;
   align-items: center;
@@ -202,6 +229,11 @@ button {
 
 .header-contacts {
   font-style: normal;
+}
+@media only screen and (max-width: 767px) {
+  .header-contacts {
+   display: none;
+  }
 }
 /* ....................................HEADER NOMBER, MAIL.................................... */
 .header-mail {
@@ -312,7 +344,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 24px;
+  gap: 72px 24px;
 }
 @media screen and (min-width: 768px) {
   .description-list {
@@ -325,10 +357,9 @@ button {
     flex-direction: row;
   }
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~``~~~~~~`
+
 .description-item {
-  max-width: 396px;
-  min-width: 288px;
+  
 }
 @media screen and (min-width: 768px) {
   .description-item {
@@ -1302,4 +1333,76 @@ width: 264px;
 .modal-form-btn:focus {
   background-color: var(--color-ocean);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+/* MOBILE STILE ----------------------------------------------------------------------*/
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #3f51b5;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu .link {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.mobile-contacts {
+  margin-bottom: ;
+}
+.mobile-socials-list{
+  display: flex;
+  gap: 16px ;
 }
