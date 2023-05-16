@@ -292,7 +292,7 @@ button {
 .container-card {
 }
 .card {
-  padding: 188px 0;
+  padding: 112px 0;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
@@ -323,7 +323,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .card {
-    padding: 112px;
+    padding: 112px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -347,6 +347,7 @@ button {
 /* // Desktop screen */
 @media screen and (min-width: 1158px) {
   .card {
+    padding: 188px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -613,6 +614,17 @@ button {
   }
 }
 .team-container {
+  max-width: 294px;
+}
+@media screen and (min-width: 768px) {
+  .team-container {
+    max-width: 582px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .team-container {
+    max-width: 1158px;
+  }
 }
 .team-head {
   margin-bottom: 72px;
@@ -627,18 +639,14 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 72px;
-  width: 264px;
-  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .team-list {
     gap: 64px 24px;
-    width: 552px;
   }
 }
 @media screen and (min-width: 1158px) {
   .team-list {
-    width: 1128px;
     gap: 24px;
   }
 }
@@ -726,6 +734,17 @@ button {
   }
 }
 .costomers-container {
+  max-width: 426px;
+}
+@media screen and (min-width: 768px) {
+  .costomers-container {
+    max-width: 582px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .costomers-container {
+    max-width: 1158px;
+  }
 }
 .customer-head {
   font-family: "Roboto";
@@ -746,18 +765,15 @@ button {
 
   gap: 72px 16px;
   width: 100%;
-  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .customers-list {
-    width: 552px;
     gap: 72px 24px;
   }
 }
 @media screen and (min-width: 1158px) {
   .customers-list {
     gap: 24px;
-    width: 1128px;
   }
 }
 
@@ -1516,9 +1532,6 @@ button {
   background-color: var(--color-white);
   cursor: pointer;
   border: none;
-  /* border-radius: 50%;
-  border: 1px solid var(--color-navy-blue); */
-  /* outline: none; */
 }
 
 @media (min-width: 768px) {
@@ -1526,11 +1539,6 @@ button {
     display: none;
   }
 }
-
-/* .menu-toggle:hover,
-.menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
-} */
 
 .menu-container {
   position: fixed;
@@ -1595,14 +1603,8 @@ button {
   flex-direction: column;
   gap: 40px;
   margin-bottom: 48px;
-  margin-top: auto;
 }
-@media (max-width: 435px) {
-  .mobile-contacts {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
+
 .mobile-item-tel {
   font-family: "Roboto";
   font-style: normal;
@@ -1612,9 +1614,6 @@ button {
 
   letter-spacing: 0.02em;
   text-transform: capitalize;
-
-  /* IRIS */
-
   color: var(--color-iris);
 }
 
@@ -1629,14 +1628,9 @@ button {
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  line-height: 24px;
-  /* identical to box height, or 120% */
-
+  line-height: 1.2;
   letter-spacing: 0.02em;
-
-  /* SLATE */
-
-  color: #434455;
+  color: var(--color-slate);
 }
 .mobile-tel {
 }
@@ -1658,7 +1652,6 @@ button {
 .mobile-socials-list {
   display: flex;
   gap: 20px;
-  margin: 0 auto;
 }
 @media (min-width: 435px) {
   .mobile-socials-list {
