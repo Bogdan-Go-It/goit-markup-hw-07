@@ -119,17 +119,9 @@ button {
   align-items: center;
   margin-right: auto;
 }
-@media screen and (min-width: 768px) {
-  .header-nav {
-    margin-right: 120px;
-  }
+.humb {
+  fill: var(--color-navy-blue);
 }
-@media screen and (min-width: 1158px) {
-  .header-nav {
-    margin-right: auto;
-  }
-}
-
 .studio,
 .studio-footer {
   font-family: Raleway, sans-serif;
@@ -145,7 +137,7 @@ button {
 }
 .header-logo {
   font-family: Raleway, sans-serif;
-
+  padding: 24px 0;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
@@ -172,7 +164,7 @@ button {
   align-items: center;
   gap: 40px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 769px) {
   .header-list {
     display: none;
   }
@@ -268,6 +260,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .header-mail {
+    display: block;
     font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
@@ -280,6 +273,9 @@ button {
 }
 @media screen and (min-width: 1158px) {
   .header-mail {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -1430,6 +1426,22 @@ button {
 .mobile-modal-icon {
   fill: var(--color-navy-blue);
 }
+.mobile-btn {
+  min-height: 24px;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-white);
+  cursor: pointer;
+  /* border: none; */
+  border-radius: 50%;
+  border: 1px solid var(--color-navy-blue);
+  /* outline: none; */
+}
 .menu-toggle {
   min-height: 24px;
   min-width: 24px;
@@ -1439,11 +1451,12 @@ button {
 
   margin: 0;
   padding: 0;
-  background-color: transparent;
+  background-color: var(--color-white);
   cursor: pointer;
   border: none;
-  border-radius: 50%;
-  outline: none;
+  /* border-radius: 50%;
+  border: 1px solid var(--color-navy-blue); */
+  /* outline: none; */
 }
 
 @media (min-width: 768px) {
@@ -1452,10 +1465,10 @@ button {
   }
 }
 
-.menu-toggle:hover,
+/* .menu-toggle:hover,
 .menu-toggle:focus {
   background-color: rgba(0, 0, 0, 0.1);
-}
+} */
 
 .menu-container {
   position: fixed;
@@ -1477,7 +1490,7 @@ button {
   transform: translateX(0);
 }
 
-.menu-container .menu-toggle {
+.menu-container .mobile-btn {
   position: absolute;
   top: 16px;
   right: 16px;
