@@ -88,8 +88,8 @@ button {
   min-width: 300px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -119,9 +119,7 @@ button {
   align-items: center;
   margin-right: auto;
 }
-.humb {
-  fill: var(--color-navy-blue);
-}
+
 .studio,
 .studio-footer {
   font-family: Raleway, sans-serif;
@@ -137,7 +135,7 @@ button {
 }
 .header-logo {
   font-family: Raleway, sans-serif;
-  padding: 24px 0;
+  padding: 24px 0 22px 0;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
@@ -325,6 +323,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .card {
+    padding: 112px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -404,7 +403,7 @@ button {
 /* ..................................CARD BUTTON.........................................*/
 
 .card-button {
-  margin-top: 48px;
+  margin-top: 72px;
   border-radius: 4px;
   border: none;
   height: 56px;
@@ -427,6 +426,16 @@ button {
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 768px) {
+  .card-button {
+    margin-top: 36px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .card-button {
+    margin-top: 48px;
+  }
+}
 .card-button:hover,
 .card-button:focus {
   color: #ffffff;
@@ -437,9 +446,19 @@ button {
 /* ==================================DESCRIPTION======================================= */
 
 .description {
-  padding: 120px 0;
 }
+
 .description-container {
+  padding: 96px 0;
+}
+@media screen and (min-width: 768px) {
+  .description-container {
+  }
+}
+@media screen and (min-width: 1158px) {
+  .description-container {
+    padding: 120px 0;
+  }
 }
 .description-list {
   display: flex;
@@ -542,7 +561,6 @@ button {
 }
 /*  =================================DEMO===============================================*/
 .demo {
-  padding-bottom: 120px;
   display: none;
 }
 
@@ -558,6 +576,7 @@ button {
 }
 
 .demo-container {
+  padding-bottom: 120px;
 }
 .demo-head {
   margin-bottom: 72px;
@@ -581,8 +600,17 @@ button {
 }
 /* =======================================TEAM========================================= */
 .team {
-  padding: 120px 0;
+  padding: 96px 0;
   background: var(--color-cloud);
+}
+@media screen and (min-width: 768px) {
+  .team {
+  }
+}
+@media screen and (min-width: 1158px) {
+  .team {
+    padding: 120px 0;
+  }
 }
 .team-container {
 }
@@ -598,21 +626,20 @@ button {
 .team-list {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  gap: 24px;
+  gap: 72px;
   width: 264px;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .team-list {
-    flex-direction: row;
+    gap: 64px 24px;
     width: 552px;
   }
 }
 @media screen and (min-width: 1158px) {
   .team-list {
-    flex-direction: row;
     width: 1128px;
+    gap: 24px;
   }
 }
 .team-item {
@@ -623,16 +650,7 @@ button {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
-@media screen and (min-width: 768px) {
-  .team-item {
-    width: calc((100% - 24px) / 2);
-  }
-}
-@media screen and (min-width: 1158px) {
-  .team-item {
-    width: calc((100% - (24px * 3)) / 4);
-  }
-}
+
 .container-team-name {
   padding: 32px 0;
 }
@@ -696,9 +714,17 @@ button {
 }
 /* -------------------------------CUSTOMERS---------------------------------------------- */
 .customer {
-  padding: 120px 0;
+  padding: 96px 0;
 }
-
+@media screen and (min-width: 768px) {
+  .customer {
+  }
+}
+@media screen and (min-width: 1158px) {
+  .customer {
+    padding: 120px 0;
+  }
+}
 .costomers-container {
 }
 .customer-head {
@@ -718,14 +744,14 @@ button {
   display: flex;
   flex-wrap: wrap;
 
-  gap: 16px;
+  gap: 72px 16px;
   width: 100%;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .customers-list {
     width: 552px;
-    gap: 24px;
+    gap: 72px 24px;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -781,8 +807,16 @@ button {
 /* ===============================FOOTER=============================================== */
 .footer {
   background-color: var(--color-grey);
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 96px 0;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer {
+    padding: 100px 0;
+  }
 }
 .footer-container-lo {
   flex-wrap: wrap;
@@ -828,6 +862,18 @@ button {
   .footer-container-logo {
     justify-content: left;
   }
+}
+.footer-logo {
+  font-family: Raleway, sans-serif;
+
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-iris);
 }
 .studio-footer {
   display: inline-block;
